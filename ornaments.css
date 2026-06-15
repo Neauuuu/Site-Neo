@@ -1,0 +1,398 @@
+/* ============================================================
+   ORNEMENTS — SWISS BRUTALISM PORTFOLIO
+   Éléments graphiques typiques du style helvétique :
+   croix, flèches, points, étoiles, crochets, lignes
+   ============================================================ */
+
+/* ============================================================
+   1. CROIX / PLUS — marqueur de grille
+   ============================================================ */
+
+/* Croix fixe dans le coin de la page hero */
+.deco-cross {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.deco-cross::before,
+.deco-cross::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  border-radius: 0;
+}
+
+.deco-cross::before {
+  width: 3px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.deco-cross::after {
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Croix décorative grande — positionnée en absolu */
+.deco-cross-lg {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.deco-cross-lg::before,
+.deco-cross-lg::after {
+  content: '';
+  position: absolute;
+  background: var(--ink);
+}
+
+.deco-cross-lg::before {
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.deco-cross-lg::after {
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Croix accent (orange) */
+.deco-cross-accent::before,
+.deco-cross-accent::after {
+  background: var(--accent) !important;
+}
+
+/* ============================================================
+   2. POINTS / DOTS
+   ============================================================ */
+
+.deco-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.deco-dot-lg {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.deco-dot-outline {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+/* Rangée de points */
+.deco-dots-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ============================================================
+   3. FLÈCHES — indicateurs directionnels
+   ============================================================ */
+
+.deco-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* Flèche dans un cercle */
+.deco-arrow-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  font-size: 1rem;
+  color: var(--ink);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.3s var(--ease-out);
+  flex-shrink: 0;
+}
+
+.deco-arrow-circle:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+  transform: rotate(45deg);
+}
+
+/* Grande flèche décorative */
+.deco-arrow-lg {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+
+/* ============================================================
+   4. ÉTOILE / ASTERISQUE ✦
+   ============================================================ */
+
+.deco-star {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.8rem;
+  line-height: 1;
+  animation: spin-slow 12s linear infinite;
+}
+
+.deco-star-lg {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 1.5rem;
+  line-height: 1;
+  animation: spin-slow 15s linear infinite;
+}
+
+.deco-star-xl {
+  display: inline-block;
+  color: var(--accent);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  animation: spin-slow 20s linear infinite;
+  opacity: 1;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   5. CROCHETS / BRACKETS
+   ============================================================ */
+
+/* Texte entouré de crochets */
+.deco-bracket {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deco-bracket::before {
+  content: '[';
+  font-weight: 300;
+  color: var(--accent);
+  font-size: 1.2em;
+}
+
+.deco-bracket::after {
+  content: ']';
+  font-weight: 300;
+  color: var(--accent);
+  font-size: 1.2em;
+}
+
+/* Grand crochet décoratif dans une section */
+.deco-bracket-lg {
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============================================================
+   6. LIGNE DIAGONALE
+   ============================================================ */
+
+.deco-slash {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 300;
+  font-size: 1.1em;
+  margin: 0 0.3em;
+}
+
+/* ============================================================
+   7. CORNER MARKS — marques de coin typographiques
+   ============================================================ */
+
+.deco-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.deco-corner-tl {
+  top: 0; left: 0;
+  border-top: 4px solid var(--accent);
+  border-left: 4px solid var(--accent);
+}
+
+.deco-corner-tr {
+  top: 0; right: 0;
+  border-top: 4px solid var(--accent);
+  border-right: 4px solid var(--accent);
+}
+
+.deco-corner-bl {
+  bottom: 0; left: 0;
+  border-bottom: 4px solid var(--accent);
+  border-left: 4px solid var(--accent);
+}
+
+.deco-corner-br {
+  bottom: 0; right: 0;
+  border-bottom: 4px solid var(--accent);
+  border-right: 4px solid var(--accent);
+}
+
+/* ============================================================
+   8. LABEL AVEC ORNEMENT — label précédé d'un point ou flèche
+   ============================================================ */
+
+.label-ornamented {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================
+   9. BANDE TYPOGRAPHIQUE SWISS
+   ============================================================ */
+
+.swiss-band {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  background: var(--ink);
+  color: var(--white);
+  border-top: var(--stroke);
+  border-bottom: var(--stroke);
+  overflow: hidden;
+}
+
+.swiss-band-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.swiss-band-item .deco-dot {
+  background: var(--white);
+}
+
+/* ============================================================
+   10. SECTION ORNAMENT — grand élément graphique en arrière-plan
+   ============================================================ */
+
+.section-with-cross {
+  position: relative;
+}
+
+/* Coin supérieur droit — croix répétée */
+.section-with-cross::before {
+  content: '+  +  +\A+  +  +\A+  +  +';
+  white-space: pre;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  opacity: 0.04;
+  letter-spacing: 0.5rem;
+  line-height: 2;
+  pointer-events: none;
+}
+
+/* ============================================================
+   11. CIRCLE COUNTER (pour section stats)
+   ============================================================ */
+
+.deco-circle-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   12. UNDERLINE AVEC POINTS
+   ============================================================ */
+
+.deco-dotted-line {
+  width: 100%;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--ink) 0px,
+    var(--ink) 4px,
+    transparent 4px,
+    transparent 10px
+  );
+  opacity: 0.15;
+  margin: 2rem 0;
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .deco-star,
+  .deco-star-lg,
+  .deco-star-xl {
+    animation: none;
+  }
+}

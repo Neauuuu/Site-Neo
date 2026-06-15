@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Neo Remond — Designer UX/UI en Master 1. Je crée des expériences digitales centrées utilisateur, de la recherche au prototypage haute fidélité." />
+  <title>Neo Remond — UX/UI Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/ornaments.css" />
+</head>
+<body>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <div class="loader" role="status" aria-label="Chargement">
+    <div class="loader-count" aria-hidden="true">0</div>
+    <div class="loader-line" aria-hidden="true"></div>
+  </div>
+
+  <header>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil">NR.</a>
+      <ul class="nav-links" role="list">
+        <li><a href="projects.html"><span class="nav-num" aria-hidden="true">01</span>Projets</a></li>
+        <li><a href="index.html#about"><span class="nav-num" aria-hidden="true">02</span>À propos</a></li>
+        <li><a href="contact.html" class="nav-cta"><span class="nav-num" aria-hidden="true">03</span>Contact</a></li>
+      </ul>
+      <button class="nav-burger" aria-label="Menu" aria-expanded="false" id="burger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" role="dialog" aria-label="Menu mobile" id="mobile-menu">
+    <a href="projects.html">Projets</a>
+    <a href="index.html#about">À propos</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- ─── HERO ──────────────────────────────────── -->
+    <section class="home-hero section-with-cross" aria-labelledby="hero-title">
+      <div class="container" style="position:relative;">
+
+        <!-- Croix décorative coin haut droit -->
+        <span class="deco-cross-lg" style="top:0; right:0;" aria-hidden="true"></span>
+        <!-- Croix décorative coin bas gauche -->
+        <span class="deco-cross-lg" style="bottom:4rem; left:-1rem; opacity:0.1;" aria-hidden="true"></span>
+
+        <div class="home-hero-eyebrow">
+          <!-- Point orange animé -->
+          <span class="deco-dot" aria-hidden="true"></span>
+          <span class="label">Disponible pour des collaborations — 2025</span>
+          <!-- Étoile tournante -->
+          <span class="deco-star" aria-hidden="true">✦</span>
+        </div>
+
+        <h1 id="hero-title" class="display-xl home-hero-title">
+          <span class="hero-line" aria-hidden="true">
+            <span class="hero-line-inner">Neo</span>
+          </span>
+          <span class="hero-line" aria-hidden="true">
+            <span class="hero-line-inner">Remond</span>
+          </span>
+        </h1>
+        <span class="sr-only">Neo Remond</span>
+
+        <div class="hero-accent-line home-hero-accent-line" aria-hidden="true"></div>
+
+        <div class="home-hero-bottom">
+          <div class="home-hero-tagline hero-subtitle">
+            <p class="body-lg">
+              Designer UX/UI en Master 1 — je transforme la complexité en expériences digitales intuitives et mémorables.
+            </p>
+          </div>
+
+          <div class="home-hero-actions">
+            <a href="projects.html" class="btn magnetic hero-cta" id="cta-work">
+              <span>Voir les projets</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <!-- Flèche dans un cercle -->
+            <a href="#about" class="deco-arrow-circle hero-cta" aria-label="Défiler vers la section À propos" style="text-decoration:none;">
+              ↓
+            </a>
+          </div>
+        </div>
+
+        <!-- Bande swiss en bas du hero -->
+        <div class="swiss-band hero-cta" aria-hidden="true" style="margin-top:4rem;">
+          <div class="swiss-band-item">
+            <span class="deco-dot" style="background:var(--muted)"></span>
+            <span>Paris, France</span>
+          </div>
+          <div class="swiss-band-item">
+            <span class="deco-dot" style="background:var(--muted)"></span>
+            <span>Master 1 UX/UI</span>
+          </div>
+          <div class="swiss-band-item">
+            <span class="deco-dot" style="background:var(--muted)"></span>
+            <span>Open to work</span>
+          </div>
+          <div class="swiss-band-item">
+            <span class="deco-dot" style="background:var(--muted)"></span>
+            <span>Figma · Research · Prototypage</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── MARQUEE ───────────────────────────────── -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">UX Research</span>
+        <span class="marquee-item">UI Design</span>
+        <span class="marquee-item">Prototypage</span>
+        <span class="marquee-item">Design System</span>
+        <span class="marquee-item">User Testing</span>
+        <span class="marquee-item">Figma</span>
+        <span class="marquee-item">UX Research</span>
+        <span class="marquee-item">UI Design</span>
+        <span class="marquee-item">Prototypage</span>
+        <span class="marquee-item">Design System</span>
+        <span class="marquee-item">User Testing</span>
+        <span class="marquee-item">Figma</span>
+      </div>
+    </div>
+
+    <!-- ─── ABOUT ──────────────────────────────────── -->
+    <section class="home-about" id="about" aria-labelledby="about-title">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div>
+            <!-- Label avec ornement flèche -->
+            <div class="label-ornamented" style="margin-bottom:0.75rem;">
+              <span class="deco-arrow" aria-hidden="true">→</span>
+              <span>À propos</span>
+            </div>
+            <h2 id="about-title" class="display-md">Qui suis-je ?</h2>
+          </div>
+          <a href="contact.html" class="btn magnetic">
+            <span>Travaillons ensemble</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <div class="about-photo img-hover-scale" style="position:relative;">
+              <!-- Marques de coin sur la photo -->
+              <span class="deco-corner deco-corner-tl" aria-hidden="true"></span>
+              <span class="deco-corner deco-corner-br" aria-hidden="true"></span>
+              <img
+                src="img/misc/photo.jpg"
+                alt="Photo de Neo Remond, designer UX/UI"
+                loading="lazy"
+                onerror="this.closest('.about-photo').style.background='#0A0A0A'; this.style.display='none';"
+              />
+              <div class="about-photo-label">Neo Remond — Paris, France</div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <p class="about-intro reveal">
+              Étudiant en <em>Master 1 UX/UI</em>, je design des produits digitaux avec une approche centrée utilisateur et une rigueur typographique héritée du design suisse.
+            </p>
+
+            <p class="about-body reveal reveal-delay-1">
+              Mon processus commence toujours par la compréhension profonde des utilisateurs : entretiens, tests, analyse. Puis je construis des solutions visuellement fortes, accessibles et ancrées dans des données réelles.
+            </p>
+
+            <p class="about-body reveal reveal-delay-2">
+              Je travaille sur des projets allant des applications mobiles aux plateformes web, en passant par la création de design systems complets.
+            </p>
+
+            <div class="about-tools reveal reveal-delay-3">
+              <span class="tool-chip">Figma</span>
+              <span class="tool-chip">Prototypage</span>
+              <span class="tool-chip">UX Research</span>
+              <span class="tool-chip">User Testing</span>
+              <span class="tool-chip">Design System</span>
+              <span class="tool-chip">Wireframing</span>
+              <span class="tool-chip">Miro</span>
+              <span class="tool-chip">Notion</span>
+            </div>
+
+            <div class="reveal reveal-delay-4" style="margin-top: 2.5rem;">
+              <a href="img/misc/cv-neo-remond.pdf" class="btn magnetic" download id="cv-download">
+                <span>Télécharger le CV</span>
+                <span class="btn-arrow" aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── STATS ──────────────────────────────────── -->
+    <div class="container reveal" aria-label="Statistiques clés">
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number" data-count="3" data-suffix="+" aria-label="3 projets">0</div>
+          <div class="stat-label">Projets réalisés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="12" data-suffix="+" aria-label="12 utilisateurs interviewés">0</div>
+          <div class="stat-label">Utilisateurs interviewés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="2" data-suffix=" ans" aria-label="2 ans d'expérience">0</div>
+          <div class="stat-label">Années d'expérience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="100" data-suffix="%" aria-label="100% passion">0</div>
+          <div class="stat-label">Passion du design</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SELECTED WORK ─────────────────────────── -->
+    <section class="home-work" aria-labelledby="work-title">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div>
+            <div class="label-ornamented" style="margin-bottom:0.75rem;">
+              <span class="deco-arrow" aria-hidden="true">→</span>
+              <span>Projets sélectionnés</span>
+            </div>
+            <h2 id="work-title" class="display-md">Mon travail</h2>
+          </div>
+          <div style="display:flex; align-items:center; gap:1.5rem;">
+            <!-- Étoile décorative -->
+            <span class="deco-star-lg" aria-hidden="true">✦</span>
+            <a href="projects.html" class="btn magnetic">
+              <span>Tous les projets</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="work-grid stagger-container">
+
+          <article class="project-card reveal" aria-labelledby="proj-home-01">
+            <a href="projects/project-01.html" aria-label="Voir le projet Fintech App — Redesign Mobile Banking">
+              <div class="project-card-image" style="position:relative;">
+                <!-- Marques de coin sur l'image -->
+                <span class="deco-corner deco-corner-tl" style="width:14px;height:14px;" aria-hidden="true"></span>
+                <span class="deco-corner deco-corner-br" style="width:14px;height:14px;" aria-hidden="true"></span>
+                <img src="img/projects/project-01/hero.png" alt="Mockup de l'application mobile de banking Fintech" loading="lazy" fetchpriority="high" />
+              </div>
+              <div class="project-card-body">
+                <div class="project-card-number">01</div>
+                <h3 class="project-card-title" id="proj-home-01">Fintech App — Redesign</h3>
+                <div class="project-card-tags">
+                  <span class="tag">UX Research</span>
+                  <span class="tag">UI Design</span>
+                  <span class="tag">Mobile</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal" aria-labelledby="proj-home-02">
+            <a href="projects/project-02.html" aria-label="Voir le projet E-Commerce — Plateforme Shopping">
+              <div class="project-card-image" style="position:relative;">
+                <span class="deco-corner deco-corner-tl" style="width:14px;height:14px;" aria-hidden="true"></span>
+                <span class="deco-corner deco-corner-br" style="width:14px;height:14px;" aria-hidden="true"></span>
+                <img src="img/projects/project-02/hero.png" alt="Mockup de la plateforme e-commerce sur MacBook et iPhone" loading="lazy" />
+              </div>
+              <div class="project-card-body">
+                <div class="project-card-number">02</div>
+                <h3 class="project-card-title" id="proj-home-02">E-Commerce — Platform</h3>
+                <div class="project-card-tags">
+                  <span class="tag">UI Design</span>
+                  <span class="tag">Web</span>
+                  <span class="tag tag-accent">Featured</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card reveal" aria-labelledby="proj-home-03">
+            <a href="projects/project-03.html" aria-label="Voir le projet Health Tracker — App Bien-être">
+              <div class="project-card-image" style="position:relative;">
+                <span class="deco-corner deco-corner-tl" style="width:14px;height:14px;" aria-hidden="true"></span>
+                <span class="deco-corner deco-corner-br" style="width:14px;height:14px;" aria-hidden="true"></span>
+                <img src="img/projects/project-03/hero.png" alt="Mockup de l'application de suivi santé Zenith Health" loading="lazy" />
+              </div>
+              <div class="project-card-body">
+                <div class="project-card-number">03</div>
+                <h3 class="project-card-title" id="proj-home-03">Health Tracker — App</h3>
+                <div class="project-card-tags">
+                  <span class="tag">UX Research</span>
+                  <span class="tag">Mobile</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SERVICES ──────────────────────────────── -->
+    <section class="home-services" aria-labelledby="services-title">
+      <div class="container">
+
+        <div class="section-header reveal" style="border-color:rgba(255,255,255,0.15); align-items:center;">
+          <div>
+            <div class="label-ornamented" style="margin-bottom:0.75rem; color:rgba(255,255,255,0.4);">
+              <span style="color:var(--accent);">✦</span>
+              <span>Ce que je fais</span>
+            </div>
+            <h2 id="services-title" class="display-md" style="color: var(--white);">Mes expertises</h2>
+          </div>
+          <!-- Grande flèche décorative -->
+          <span class="deco-arrow-lg" aria-hidden="true" style="opacity:0.3;">→</span>
+        </div>
+
+        <div class="services-grid stagger-container">
+
+          <div class="service-item reveal">
+            <div class="service-number" style="display:flex;align-items:center;gap:0.5rem;">
+              <span class="deco-dot" aria-hidden="true"></span>01
+            </div>
+            <h3 class="service-title">UX Research</h3>
+            <p class="service-desc">Entretiens utilisateurs, tests d'usabilité, personas, parcours utilisateur — pour ancrer chaque décision de design dans des données réelles.</p>
+          </div>
+
+          <div class="service-item reveal">
+            <div class="service-number" style="display:flex;align-items:center;gap:0.5rem;">
+              <span class="deco-dot" aria-hidden="true"></span>02
+            </div>
+            <h3 class="service-title">UI Design</h3>
+            <p class="service-desc">Interfaces visuellement fortes, cohérentes et accessibles. De la maquette fil de fer au design haute fidélité prêt pour le développement.</p>
+          </div>
+
+          <div class="service-item reveal">
+            <div class="service-number" style="display:flex;align-items:center;gap:0.5rem;">
+              <span class="deco-dot" aria-hidden="true"></span>03
+            </div>
+            <h3 class="service-title">Prototypage</h3>
+            <p class="service-desc">Prototypes interactifs sur Figma pour valider les concepts, tester les parcours et communiquer avec les développeurs.</p>
+          </div>
+
+          <div class="service-item reveal">
+            <div class="service-number" style="display:flex;align-items:center;gap:0.5rem;">
+              <span class="deco-dot" aria-hidden="true"></span>04
+            </div>
+            <h3 class="service-title">Design System</h3>
+            <p class="service-desc">Création de bibliothèques de composants cohérentes, documentées et scalables pour assurer la consistance produit.</p>
+          </div>
+
+          <div class="service-item reveal">
+            <div class="service-number" style="display:flex;align-items:center;gap:0.5rem;">
+              <span class="deco-dot" aria-hidden="true"></span>05
+            </div>
+            <h3 class="service-title">Stratégie UX</h3>
+            <p class="service-desc">Définition de l'architecture d'information, des flux utilisateurs et des indicateurs de succès pour orienter les équipes produit.</p>
+          </div>
+
+          <div class="service-item reveal">
+            <div class="service-number" style="display:flex;align-items:center;gap:0.5rem;">
+              <span class="deco-dot" aria-hidden="true"></span>06
+            </div>
+            <h3 class="service-title">Accessibilité</h3>
+            <p class="service-desc">Design inclusif respectant les standards WCAG 2.1 — pour des produits utilisables par tous, sans exception.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── HOME CTA ──────────────────────────────── -->
+    <section class="home-cta" aria-labelledby="cta-section-title" style="position:relative; overflow:hidden;">
+
+      <!-- Grande étoile tournante décorative en fond -->
+      <span class="deco-star-xl" aria-hidden="true"
+        style="position:absolute; top:50%; right:8%; transform:translateY(-50%); opacity:0.12; font-size:clamp(6rem,14vw,14rem);">
+        ✦
+      </span>
+      <!-- Crochet décoratif -->
+      <span class="deco-bracket-lg" aria-hidden="true" style="position:absolute; top:10%; left:3%; font-size:clamp(5rem,12vw,12rem);">[</span>
+
+      <div class="container" style="position:relative; z-index:1;">
+
+        <!-- Rangée de points au-dessus du titre -->
+        <div class="deco-dots-row reveal" aria-hidden="true" style="margin-bottom:2rem; justify-content:center;">
+          <span class="deco-dot-outline"></span>
+          <span class="deco-dot"></span>
+          <span class="deco-dot-outline"></span>
+          <span class="deco-dot"></span>
+          <span class="deco-dot-outline"></span>
+        </div>
+
+        <h2 id="cta-section-title" class="home-cta-title reveal">
+          Un projet en<br /><em>tête ?</em>
+        </h2>
+        <a href="contact.html" class="btn btn-accent magnetic reveal" id="cta-contact">
+          <span>Prendre contact</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <!-- Croix en footer -->
+          <span class="deco-cross" style="color:var(--muted);opacity:0.5;width:14px;height:14px;" aria-hidden="true"></span>
+          <span class="footer-copy">© 2025 Neo Remond. Tous droits réservés.</span>
+        </div>
+        <nav class="footer-links" aria-label="Liens réseaux sociaux">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+          <span class="deco-slash" aria-hidden="true">/</span>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">Behance</a>
+          <span class="deco-slash" aria-hidden="true">/</span>
+          <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">Dribbble</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+
+</body>
+</html>
